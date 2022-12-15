@@ -1,4 +1,4 @@
-#include"main.h"
+#include"alx.h"
 
 /**
  *   _isupper - Check if a letter is upper
