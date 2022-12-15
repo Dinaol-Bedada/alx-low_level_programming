@@ -1,4 +1,4 @@
-#include "alx.h"
+#include "main.h"
 
 /**
  *   * mul - Multiplies two integers
