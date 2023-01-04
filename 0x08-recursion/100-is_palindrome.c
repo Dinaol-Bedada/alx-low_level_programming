@@ -1,57 +1,52 @@
-#include "main.h"
-
-int check_palindrome(char *s);
-
+#include "holberton.h"
 /**
-  * 100-is_palindrome - Returns if a string is palindrome
-  * @s: the string value to be checked
-  *
-  * Return: integer value
-  */
-int is_palindrome(char *s)
+ *_strlen_p - returns length
+ *
+ *@s:string
+ *Return:length
+ *
+ */
+int _strlen_p(char *s)
 {
-	if (*s == '0')
-		return (1);
-
-	return (check_palindrome(s));
-}
-
-/**
-  * check_palindrome - Check if a string is palindrome
-  * @s: the string value to be checked
-  *
-  * Return: integer value
-  */
-int check_palindrome(char *s)
-{
-	int l = _strlen_recursion(s) - 1;
-
-	if (*s == s[l])
+	if (!*s)
 	{
-		s++;
-		l--;
+		return (0);
 	}
 	else
 	{
-		return (0);
+		return (1 + _strlen_p(++s));
 	}
-
-	return (1);
 }
-
 /**
-  * _strlen_recursion - Get the length of a string
-  * @s: the string to get the length
-  *
-  * Return: the string length
-  */
-int _strlen_recursion(char *s)
+ *_test - palindrome?
+ *@l:length
+ *@s:string
+ *Return:boolean
+ *
+ */
+int _test(char *s, int l)
 {
-	if (*s == '\0')
+	if (l < 1)
 	{
-		return (0);
+		return (1);
 	}
+	if (*s == *(s + l))
+	{
+		return (_test(s + 1, l - 2));
+	}
+	return (0);
+}
+/**
+ *is_palindrome - checks whether a string is the same when reversed
+ *
+ *@s:string
+ *
+ *Return:1-true,0-false
+ *
+ */
+int is_palindrome(char *s)
+{
+	int length = _strlen_p(s);
 
-	s++;
-	return (_strlen_recursion(s) + 1);
+	return (_test(s, length - 1));
 }
