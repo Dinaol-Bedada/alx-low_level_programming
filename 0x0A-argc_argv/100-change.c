@@ -1,12 +1,12 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 /*
- * main - Main Entry
- * @argc: input
- * @argv: input
- * Return: Always 0 (success)
+* main - Main Entry
+* @argc: input
+* @argv: input
+* Return: Always 0 (success)
 */
+
 int main(int argc, char *argv[])
 {
 int cents, coins = 0;
