@@ -1,5 +1,5 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef DYNAMIC_H
+#define DYNAMIC_H
 
 int _putchar(char c);
 int _islower(int c);
@@ -22,4 +22,4 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 
-#endif /* _MAIN_H_ */
+#endif /* DYNAMIC_H */
